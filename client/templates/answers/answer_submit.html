@@ -1,0 +1,19 @@
+<template name="answerSubmit">
+  <form name="comment" class="comment-form form">
+    <div class="form-group {{errorClass 'body'}}">
+        <div class="controls">
+            <label for="body">Добавьте ответ</label>
+            <textarea name="body" id="body" class="form-control" rows="3"></textarea>
+            <span class="help-block">{{errorMessage 'body'}}</span>
+        </div>
+    </div>
+<div class="form-group {{errorClass 'isRight'}}">
+    <div class="checkbox">
+    <label>
+      <input type="checkbox" name="isRight" id="isRight"> Это правильный ответ
+    </label>
+  </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Добавить ответ</button>
+  </form>
+</template>

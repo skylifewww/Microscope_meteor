@@ -1,0 +1,15 @@
+<template name="questionPage">
+  <div class="post-page page">
+    {{> questionItem}}
+  
+    <ul class="comments">
+      {{#each answers}}
+        {{> answerItem}}
+      {{/each}}
+    </ul>
+  
+    {{#if ownQuestion}}
+      {{> answerSubmit}}
+    {{/if}}
+  </div>
+</template>

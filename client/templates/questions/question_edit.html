@@ -1,0 +1,24 @@
+<template name="questionEdit">
+  <form class="main form page">
+
+ <div class="form-group {{errorClass 'category'}}">
+      <label class="control-label" for="category">Тема Теста</label>
+      <div class="controls">
+          <input name="category" id="category" type="text" value="" placeholder="Введите тему теста" class="form-control"/>
+          <span class="help-block">{{errorMessage 'category'}}</span>
+      </div>
+    </div>
+    <div class="form-group {{errorClass 'title'}}">
+      <label class="control-label" for="title">Вопрос</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="Введите вопрос" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+
+
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Удалить вопрос</a>
+  </form>
+</template>

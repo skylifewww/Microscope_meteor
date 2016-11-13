@@ -1,0 +1,18 @@
+<template name="questionItem">
+  <div class="post">
+   
+    <div class="post-content">
+      <h3>{{title}}  <span>   {{category}}</span></h3>
+      <p>
+      
+        {{#if ownQuestion}}<a href="{{pathFor 'questionEdit'}}">Редактировать</a>{{/if}}
+      </p>
+    </div>
+     
+    {{#if ownQuestion}}<a href="{{pathFor 'questionPage'}}" class="discuss btn btn-default">Добавить ответы</a>
+    {{else}}
+
+    <a href="{{pathFor 'questionPage'}}" class="discuss btn btn-default">Ответить на вопрос</a>
+    {{/if}}
+  </div>
+</template>

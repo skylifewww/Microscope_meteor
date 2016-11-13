@@ -1,0 +1,11 @@
+<template name="answerItem">
+  <li>
+  {{#if ownQuestion}}
+    <p>{{body}}</p>
+    <p>{{isRight}}</p>
+    {{else}}
+    <p>{{body}}</p>
+    <a href="{{pathFor 'questionPage'}}" class="discuss btn btn-default">Выбрать ответ</a>
+    {{/if}}
+  </li>
+</template>

@@ -1,0 +1,17 @@
+<template name="questionsList">
+  <div class="posts page">
+    <div class="wrapper">
+      {{#each questions}}
+        {{> questionItem}}
+      {{/each}}
+    </div>
+    
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Еще ...</a>
+    {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
+    {{/if}}
+  </div>
+</template>
